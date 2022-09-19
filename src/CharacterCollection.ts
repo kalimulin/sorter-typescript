@@ -1,16 +1,19 @@
 export class CharacterCollection {
-  constructor( public characters: string) {}
+  constructor( public data: string) {}
 
   get length(): number {
-    return this.characters.length;
+    return this.data.length;
   }
 
   compare(leftIndex: number, rightIndex: number): boolean {
-    return this.characters[leftIndex] > this.characters[rightIndex]
+    return this.data[leftIndex].toLowerCase() > this.data[rightIndex].toLowerCase()
   }
 
   swap(leftIndex: number, rightIndex: number): void {
-    this.characters =  this.characters.slice(0, leftIndex - 1) + this.characters[rightIndex] + this.characters[leftIndex] + this.characters.slice(rightIndex + 1);
-    console.log(this.characters);
+    const characters = this.data.split('');
+    const temp = characters[leftIndex];
+    characters[leftIndex] = characters[rightIndex];
+    characters[rightIndex] = temp;
+    this.data = characters.join('');
   }
 }
