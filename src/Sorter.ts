@@ -6,7 +6,8 @@ export abstract class Sorter {
 
   sort(): void {
     const { length } = this;
-
+    // сортировка пузырьком
+    // да, не самая эффективная, но простая в реализации
     for (let i = 0; i < length; i++) {
       for (let j = 0; j < length - i - 1; j++) {
         if (this.compare(j, j+1)) {
