@@ -14,14 +14,6 @@ linkedList.add(64);
 linkedList.add(34);
 linkedList.add(47);
 
-//const sorter = new Sorter(numbersCollection);
-//const sorter2 = new Sorter(characterCollection);
-//const sorter3 = new Sorter(linkedList);
-
-//sorter.sort();
-//sorter2.sort();
-//sorter3.sort();
-
 numbersCollection.sort();
 characterCollection.sort();
 linkedList.sort();
